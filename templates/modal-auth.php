@@ -22,7 +22,7 @@
                     <input type="text" placeholder="Почта" name="email" class="form-control-plaintext" ><br>
                     <input type="password" placeholder="Пароль" name="password" class="form-control-plaintext"><br>
                     <input type="password" placeholder="Подтвердите пароль" name="confirm-password" class="form-control-plaintext"><br>
-                    <button class="btn btn-success">Зарегистрироваться</button>
+                    <button type="submit" class="btn btn-success">Зарегистрироваться</button>
 
                 </form>
             </div>
