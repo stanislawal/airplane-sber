@@ -5,10 +5,10 @@
         <div class="modal-content">
             <div class="auth">
                 <div class="text-success" style="text-align: center; font-weight: bold;">Вход</div>
-                <form action="" method="post">
-                    <input type="text" placeholder="Почта" class="form-control-plaintext" ><br>
-                    <input type="text" placeholder="Подтвердите почту" class="form-control-plaintext"><br>
-                    <input type="password" placeholder="Пароль" class="form-control-plaintext"><br>
+                <form action="../script/auth.php" method="post">
+                    <input type="text" placeholder="Почта" name="email" class="form-control-plaintext" ><br>
+                    <input type="text" placeholder="Подтвердите почту" name="confirm-email" class="form-control-plaintext"><br>
+                    <input type="password" placeholder="Пароль" name="password" class="form-control-plaintext"><br>
                     <button class="btn btn-success">Войти</button>
 
                 </form>
@@ -18,10 +18,10 @@
             </div>
             <div class="reg">
                 <div class="text-success" style="text-align: center; font-weight: bold;">Регистрация</div>
-                <form action="" method="post">
-                    <input type="text" placeholder="Почта" class="form-control-plaintext" ><br>
-                    <input type="password" placeholder="Пароль" class="form-control-plaintext"><br>
-                    <input type="password" placeholder="Подтвердите пароль" class="form-control-plaintext"><br>
+                <form action="../script/reg.php" method="post">
+                    <input type="text" placeholder="Почта" name="email" class="form-control-plaintext" ><br>
+                    <input type="password" placeholder="Пароль" name="password" class="form-control-plaintext"><br>
+                    <input type="password" placeholder="Подтвердите пароль" name="confirm-password" class="form-control-plaintext"><br>
                     <button class="btn btn-success">Зарегистрироваться</button>
 
                 </form>
