@@ -1,0 +1,150 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+a:link{
+    text-decoration: none;
+    color: white;
+}
+
+a:visited{
+    color: white;
+}
+
+a:active{
+    color: white;
+}
+
+a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.index-main-block{
+
+}
+
+.index-video-background{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.index-header{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 10%;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.header-right, .header-middle{
+    line-height: 67px;
+}
+
+
+.header-text{
+    align-items: center;
+}
+
+.header-text:hover{
+    color: #efb249;
+    transition: 1s;
+}
+
+.index-content{
+    margin-top: 50px;
+    display: flex;
+}
+
+.table thead th{
+    vertical-align: top;
+}
+.table-hover:hover{
+    backdrop-filter: blur(10px);
+    transition: 2s;
+}
+
+.content-left-block-table{
+    width: 600px;
+    height: 100%;
+    color: white;
+    text-align: center;
+}
+
+.index-content-left-block{
+    width: 600px;
+}
+.index-content-right-block{
+    width: 100%;
+    height: 500px;
+    border: solid 2px white;
+    margin-left: 50px;
+    padding-left: 10px;
+
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    color: white;
+}
+
+.index-content-right-block:hover{
+    backdrop-filter: blur(10px);
+    transition: 2s;
+}
+.line{
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+.block-news{
+    height: 500px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+.head-news{
+
+}
+
+.body-news{
+    margin-top: 10px;
+    height: 600px;
+}
+
+
+.block-news::-webkit-scrollbar { /* webkit */
+    width: 0;
+    height: 0;
+}
+.text-news{
+    margin-top: 20px;
+}
+
+.modal-content{
+    height: 300px;
+    display: flex;
+    width: 800px;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+.modal-dialog{
+    margin-top: 150px;
+}
