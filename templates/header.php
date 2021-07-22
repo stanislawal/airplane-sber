@@ -7,7 +7,14 @@
     </div>
 
     <div class="header-right">
-       <p class="header-text"><button type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-lg">Войти</button></p>
+        <?
+        if(isset($_COOKIE['auth'])){
+            ?><p class="header-text"><a href="../script/exit.php" class="btn"">Выйти</a></p><?
+        }else{
+            ?><p class="header-text"><button type="button" class="btn" data-toggle="modal" data-target=".bd-example-modal-lg">Войти</button></p><?
+        }
+        ?>
+
     </div>
 </div>
 
