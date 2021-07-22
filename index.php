@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style-index.css">
+    <link rel="stylesheet" href="style/notifycation.css">
     <title>Airplane</title>
 </head>
 <body>
@@ -16,9 +17,69 @@
         <div class="head">
             <? include('templates/header.php') ?>
         </div>
+        <? $password_confirm = $_GET['password'];
+           $user_register = $_GET['user'];
+        if ($password_confirm == 'non-confirm') {
+            ?>
+            <div class="alert">
+                <span class="closebtn">×</span>
+                <strong>Внимание!</strong> Введённые вами пароли не совпадают. Попробуйте ещё раз!
+            </div>
+            <?
+        } else {
+            if ($user_register == 'user-register') {
+                ?>
+                <div class="alert">
+                    <span class="closebtn">×</span>
+                    <strong>Внимание!</strong> Пользователь с таким электронным адресом уже зарегистрирован на нашем
+                    сайте! Введите другой E-mail.
+                </div>
+                <?
+            } else {
+                if ($user_register == 'user-register-success') {
+                    ?>
+                    <div class="alert success">
+                        <span class="closebtn">×</span>
+                        Ваш аккаунт успешно зарегистрирован в нашей системе! Спасибо, что Вы с нами!
+                    </div>
+                    <?
+                } else {
+
+                }
+            }
+        }
+        $email_confirm = $_GET['email'];
+        $user_isset = $_GET['user'];
+        $user_auth = $_GET['user'];
+          if ($email_confirm == 'non-confirm'){
+              ?>
+              <div class="alert">
+                  <span class="closebtn">×</span>
+                  <strong>Внимание!</strong> Введённые вами электронные адреса не совпадают. Попробуйте ещё раз!
+              </div>
+              <?
+          }else{
+              if ($user_isset == 'isset'){
+                  ?>
+                  <div class="alert">
+                      <span class="closebtn">×</span>
+                      <strong>Внимание!</strong> Такого пользователя не существует либо введённый вами пароль неверен. Попробуйте ещё раз!
+                  </div>
+                  <?
+              }else{
+                  if ($user_register == 'user-auth-success') {
+                      ?>
+                      <div class="alert success">
+                          <span class="closebtn">×</span>
+                          <div class="alert-blur">Вы успешно вошли в систему! Спасибо, что Вы с нами!</div>
+                      </div>
+                  <?
+              }
+          }
+          }
+        ?>
 
         <div class="index-content">
-
             <div class="index-content-left-block">
                 <div class="content-left-block-table">
                     <table class="table table-hover">
@@ -140,7 +201,6 @@
             </div>
             <div class="order">
                 <? include('templates/modal-auth.php'); ?>
-
             </div>
 
         </div>
@@ -163,5 +223,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+<script src="js/notifycation.js"></script>
 </body>
 </html>

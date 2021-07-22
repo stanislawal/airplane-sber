@@ -12,12 +12,12 @@ $array = mysqli_fetch_array($data);
 $array_email = $array['email'];
 $array_password = $array['password'];
 if ($email != $confirm_email) {
-    echo "Почтовые адреса не совпадают";
+    header('Location:../index.php?email=non-confirm');
 } else {
     if ($num < 0 || $password != $array_password) {
-        echo "такого пользователя не существует или неверен пароль";
+        header('Location:../index.php?user=user-isset');
     } else {
         setcookie('auth', time() + 3600 * 24 * 7, time() + (60 * 60 * 24 * 30), '/');
-        header('Location:../index.php');
+        header('Location:../index.php?user=user-auth-success');
     }
 }

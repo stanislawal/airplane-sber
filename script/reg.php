@@ -14,10 +14,10 @@ $array_email = $array['email'];
 
 
 if($password != $confirm_password){
-    echo "Пароли не совпадают";
+    header('Location:../index.php?password=non-confirm');
 }else{
     if ($num > 0){
-        echo "Пользователь с таким адресом зарегистрирован";
+        header('Location:../index.php?user=user-register');
     }else{
         $query = "INSERT INTO user(email, password) VALUES ('$email','$confirm_password')";
         mysqli_query($dbc, $query);
@@ -26,6 +26,6 @@ if($password != $confirm_password){
 //        $array = mysqli_fetch_array($data);
 //        $id_user = $array['id'];
         setcookie('auth',time() + 3600*24*7, time() + (60*60*24*30),'/');
-        header('Location:../index.php');
+        header('Location:../index.php?user=user-register-success');
     }
 }
