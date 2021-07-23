@@ -224,5 +224,7 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 <script src="js/notifycation.js"></script>
+<script src="/js/input-controller.js"></script>
+
 </body>
 </html>
