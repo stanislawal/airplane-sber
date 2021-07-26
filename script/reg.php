@@ -19,13 +19,14 @@ if($password != $confirm_password){
     if ($num > 0){
         header('Location:../index.php?user=user-register');
     }else{
-        $query = "INSERT INTO user(email, password) VALUES ('$email','$confirm_password')";
-        mysqli_query($dbc, $query);
 //        $query = "SELECT * FROM user WHERE email = '$email'";
 //        $data = mysqli_query($dbc, $query);
 //        $array = mysqli_fetch_array($data);
 //        $id_user = $array['id'];
-        setcookie('auth',time() + 3600*24*7, time() + (60*60*24*30),'/');
+        $indentify = time() + 3600*24*7;
+        setcookie('auth',$indentify, time() + (60*60*24*30),'/');
+        $query = "INSERT INTO user(unique_user,email, password, role) VALUES ('$indentify','$email','$confirm_password', 'user')";
+        mysqli_query($dbc, $query);
         header('Location:../index.php?user=user-register-success');
     }
 }

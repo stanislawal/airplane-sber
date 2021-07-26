@@ -18,7 +18,7 @@
             <? include('templates/header.php') ?>
         </div>
         <? $password_confirm = $_GET['password'];
-           $user_register = $_GET['user'];
+        $user_register = $_GET['user'];
         if ($password_confirm == 'non-confirm') {
             ?>
             <div class="alert">
@@ -51,32 +51,33 @@
         $email_confirm = $_GET['email'];
         $user_isset = $_GET['user'];
         $user_auth = $_GET['user'];
-          if ($email_confirm == 'non-confirm'){
-              ?>
-              <div class="alert">
-                  <span class="closebtn">×</span>
-                  <strong>Внимание!</strong> Введённые вами электронные адреса не совпадают. Попробуйте ещё раз!
-              </div>
-              <?
-          }else{
-              if ($user_isset == 'isset'){
-                  ?>
-                  <div class="alert">
-                      <span class="closebtn">×</span>
-                      <strong>Внимание!</strong> Такого пользователя не существует либо введённый вами пароль неверен. Попробуйте ещё раз!
-                  </div>
-                  <?
-              }else{
-                  if ($user_register == 'user-auth-success') {
-                      ?>
-                      <div class="alert success">
-                          <span class="closebtn">×</span>
-                          <div class="alert-blur">Вы успешно вошли в систему! Спасибо, что Вы с нами!</div>
-                      </div>
-                  <?
-              }
-          }
-          }
+        if ($email_confirm == 'non-confirm') {
+            ?>
+            <div class="alert">
+                <span class="closebtn">×</span>
+                <strong>Внимание!</strong> Введённые вами электронные адреса не совпадают. Попробуйте ещё раз!
+            </div>
+            <?
+        } else {
+            if ($user_isset == 'isset') {
+                ?>
+                <div class="alert">
+                    <span class="closebtn">×</span>
+                    <strong>Внимание!</strong> Такого пользователя не существует либо введённый вами пароль неверен.
+                    Попробуйте ещё раз!
+                </div>
+                <?
+            } else {
+                if ($user_register == 'user-auth-success') {
+                    ?>
+                    <div class="alert success">
+                        <span class="closebtn">×</span>
+                        <div class="alert-blur">Вы успешно вошли в систему! Спасибо, что Вы с нами!</div>
+                    </div>
+                    <?
+                }
+            }
+        }
         ?>
 
         <div class="index-content">
@@ -207,13 +208,12 @@
     </div>
     <div class="index-main-block">
         <div class="index-video-background">
-            <video width="100%" height="auto" muted preload="auto" autoplay="autoplay">
+            <video height="auto" muted preload="auto" autoplay="autoplay">
                 <source src="video\Sunset.mp4" type="video/mp4">
             </video>
         </div>
     </div>
 
-</div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
