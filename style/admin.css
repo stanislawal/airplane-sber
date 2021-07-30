@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+
+
+.admin-header{
+
+}
+
+li{
+    list-style-type: none;
+}
+
+.admin-menu{
+    position: fixed;
+    height: 100vh;
+    width: 200px;
+    background-color: #1df691;
+}
+
+.admin_menu_list{
+    text-align: center;
+}

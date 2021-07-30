@@ -203,7 +203,6 @@
             <div class="order">
                 <? include('templates/modal-auth.php'); ?>
             </div>
-
         </div>
     </div>
     <div class="index-main-block">
