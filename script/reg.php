@@ -24,7 +24,7 @@ if($password != $confirm_password){
 //        $array = mysqli_fetch_array($data);
 //        $id_user = $array['id'];
         $indentify = time() + 3600*24*7;
-        setcookie('auth',$indentify, time() + (60*60*24*30),'/');
+        setcookie('auth_user',$indentify, time() + (60*60*24*30),'/');
         $query = "INSERT INTO user(unique_user,email, password, role) VALUES ('$indentify','$email','$confirm_password', 'user')";
         mysqli_query($dbc, $query);
         header('Location:../index.php?user=user-register-success');

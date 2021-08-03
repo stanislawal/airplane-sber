@@ -24,11 +24,11 @@ a:visited{
 
 a:active{
     color: white;
-}
+    }
 
-a:hover{
-    text-decoration: none;
-    color: white;
+    a:hover{
+        text-decoration: none;
+        color: white;
 }
 
 .index-main-block{
@@ -102,6 +102,7 @@ video{
 
 .index-content-left-block{
     width: 600px;
+
 }
 .index-content-right-block{
     width: 100%;
@@ -158,3 +159,4 @@ video{
 .modal-dialog{
     margin-top: 150px;
 }
+

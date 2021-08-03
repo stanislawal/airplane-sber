@@ -59,7 +59,7 @@
             </div>
             <?
         } else {
-            if ($user_isset == 'isset') {
+            if ($user_isset == 'user-isset') {
                 ?>
                 <div class="alert">
                     <span class="closebtn">×</span>
